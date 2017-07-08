@@ -11,8 +11,7 @@ The application contains three directories:
 
 ## Run the application
 ```shell
-$ sbt
-> ~re-start
+$ sbt ~re-start
 $ open http://0.0.0.0:8081
 ```
 
