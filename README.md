@@ -37,15 +37,6 @@ The application uses the [sbt-web-scalajs](https://github.com/vmunier/sbt-web-sc
   - Open your browser dev tool to set breakpoints or to see the guilty line of code when an exception is thrown
   - Source Maps is _disabled in production_ by default to prevent your users from seeing the source files. But it can easily be enabled in production too by setting `emitSourceMaps in fullOptJS := true` in the Scala.js projects.
 
-## Cleaning
-
-The root project aggregates all the other projects by default.
-Use this root project, called `akka-http-with-scalajs-example`, to clean all the projects at once.
-```shell
-$ sbt
-> akka-http-with-scalajs-example/clean
-```
-
 ## IDE integration
 
 ### IntelliJ
