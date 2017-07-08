@@ -16,6 +16,16 @@ $ sbt
 $ open http://0.0.0.0:8081
 ```
 
+## Control the dude
+```
+→ move right
+← move left
+SPACE jump
+```
+
+## Screenshot
+![Alt text](screenshots/screenshot.png?raw=true "tutorial screenshot")
+
 ## Features
 
 The application uses the [sbt-web-scalajs](https://github.com/vmunier/sbt-web-scalajs) sbt plugin and the [scalajs-scripts](https://github.com/vmunier/scalajs-scripts) library.
