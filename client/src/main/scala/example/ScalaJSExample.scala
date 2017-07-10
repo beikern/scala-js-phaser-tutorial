@@ -35,7 +35,8 @@ class TutorialPhaserIo {
     game.load.image("sky", "assets/images/sky.png")
     game.load.image("ground", "assets/images/platform.png")
     game.load.image("star", "assets/images/star.png")
-    game.load.spritesheet("dude", "assets/images/dude.png", 32, 48)
+//    game.load.spritesheet("dude", "assets/images/dude.png", 32, 48)
+    game.load.spritesheet("dude", "assets/images/dude2.png", 22, 45)
   }
 
   def create(): Unit = {
@@ -75,9 +76,12 @@ class TutorialPhaserIo {
         body.collideWorldBounds = true
     }
 
+    println(Array.range(10, 18).map(_.toString).mkString(", "))
+
     // Adding animations to our dude
-    player.animations.add("left",Array[Double](0,1,2,3).toJSArray, 10, true)
-    player.animations.add("right",Array[Double](5,6,7,8).toJSArray,10, true)
+
+    player.animations.add("left",Array[Double](10,11,12,13,14,15,16).toJSArray, 17, true)
+    player.animations.add("right",Array[Double](0,1,2,3,4,5,6,7,8).toJSArray,17, true)
 
     // Declaring the keys to move our dude
     spacebarKey = game.input.keyboard.addKey(KeyCode.SPACEBAR)
@@ -130,7 +134,7 @@ class TutorialPhaserIo {
         } else {
           player.animations.stop()
           body.velocity.x = 0
-          player.frame = 4
+          player.frame = 9
         }
         if (spacebarKey.isDown && body.touching.down) {
           body.velocity.y = -550
